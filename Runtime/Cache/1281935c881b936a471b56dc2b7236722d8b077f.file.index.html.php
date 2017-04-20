@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-02-24 23:49:51
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-13 20:51:59
          compiled from "/var/www/shop/Home/View/Index/index.html" */ ?>
 <?php /*%%SmartyHeaderCode:59859870158b0561faada50-65411083%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1281935c881b936a471b56dc2b7236722d8b077f' => 
     array (
       0 => '/var/www/shop/Home/View/Index/index.html',
-      1 => 1483684580,
+      1 => 1492082397,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
   'unifunc' => 'content_58b0561fd0a37',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58b0561fd0a37')) {function content_58b0561fd0a37($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

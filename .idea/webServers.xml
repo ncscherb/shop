@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="78461897-4b70-4d08-99b7-18d3f70e357d" name="shop" url="http://localhost">
-        <fileTransfer port="0" mountedRoot="F:\dsl\www" accessType="MOUNT" />
+        <fileTransfer port="0" mountedRoot="$PROJECT_DIR$/.." accessType="MOUNT" />
       </webServer>
     </option>
   </component>
