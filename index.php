@@ -22,15 +22,15 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 define('APP_DEBUG',true);
 
 // 定义应用目录
-//define('APP_PATH','./Application/');
+define('APP_PATH','./Application/');
 
 //定义模板常量
-define("SITE_URL","/shop/");
-define("CSS_URL","/shop/Home/Public/css/");
-define("IMG_URL","/shop/Home/Public/img/");
-define("JS_URL","/shop/Home/Public/js");
-define("CSS_URL_ADMIN","/shop/Admin/Public/css/");
-define("IMG_URL_ADMIN","/shop/Admin/Public/img/");
+define("SITE_URL","/shop/Application/");
+define("CSS_URL","/shop/Application/Home/Public/css/");
+define("IMG_URL","/shop/Application/Home/Public/img/");
+define("JS_URL","/shop/Application/Home/Public/js");
+define("CSS_URL_ADMIN","/shop/Application/Admin/Public/css/");
+define("IMG_URL_ADMIN","/shop/Application/Admin/Public/img/");
 define("__PUBLIC__","/shop/Public");
 
 // 引入ThinkPHP入口文件

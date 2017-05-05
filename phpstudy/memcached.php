@@ -43,4 +43,12 @@
 	var_dump($m->get("class"));
 	echo "<br/>";
 	
-		
+	//将session数据存储到memcached
+	ini_set("session.save_handler","memcached");
+	ini_set("session.save_path","127.0.0.1:11211");
+
+	session_start();
+	$_SESSION['username']="dsl";
+    $_SESSION['pwd']="zw";
+	var_dump($_SESSION["username"]);
+	echo  session_id();
