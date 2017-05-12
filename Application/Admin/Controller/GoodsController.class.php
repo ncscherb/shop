@@ -10,7 +10,7 @@ namespace Admin\Controller;
 use Think\Controller;
 use Tools\AdminBaseController;
 
-class GoodsController extends AdminBaseController
+class GoodsController extends adminBaseController
 {
     function update($goods_id)
     {
@@ -111,7 +111,7 @@ class GoodsController extends AdminBaseController
                 //保持到数据中
                 $_POST["goods_big_img"]=ltrim($filepath,"./");
                 $_POST["goods_small_img"]=ltrim($filesavepath,"./");
-                $_POST["goods_create_time"]=date("y-m-d h:i:s",time());
+                $_POST["goods_create_time"]=time();//date("y-m-d h:i:s",time());
 
                 $row=$goods->add($_POST);//return the added good's id
                 if($row)

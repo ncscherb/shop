@@ -12,7 +12,11 @@ class GoodsController extends Controller{
         $this->display("category");
     }
 
-    public function detail(){
+    public function detail($id){
+        $good=D("goods")->find($id);
+
+        $good["goods_create_time"]=date("Y-m-d",$good["goods_create_time"]);
+        $this->assign("info",$good);
         $this->display();
     }
 }

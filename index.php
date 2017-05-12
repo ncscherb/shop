@@ -25,7 +25,7 @@ define('APP_DEBUG',true);
 define('APP_PATH','./Application/');
 
 //定义模板常量
-define("SITE_URL","/shop/Application/");
+define("SITE_URL","/shop/");
 define("CSS_URL","/shop/Application/Home/Public/css/");
 define("IMG_URL","/shop/Application/Home/Public/img/");
 define("JS_URL","/shop/Application/Home/Public/js");

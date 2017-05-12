@@ -1,31 +1,9 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 20:52:17
-         compiled from "./Application/Admin/View/Goods/add.html" */ ?>
-<?php /*%%SmartyHeaderCode:1929859459145e81a4cda9-15366601%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-$_valid = $_smarty_tpl->decodeProperties(array (
-  'file_dependency' => 
-  array (
-    '7fc7f88cd379afcd55acface200be3e0e2fd8db6' => 
-    array (
-      0 => './Application/Admin/View/Goods/add.html',
-      1 => 1494504747,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '1929859459145e81a4cda9-15366601',
-  'function' => 
-  array (
-  ),
-  'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59145e81b0c2c',
-),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59145e81b0c2c')) {function content_59145e81b0c2c($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
         <title>添加商品</title>
         <meta http-equiv="content-type" content="text/html;charset=utf-8">
-        <link href="<?php echo @CSS_URL_ADMIN;?>
-mine.css" type="text/css" rel="stylesheet">
+        <link href="{$smarty.const.CSS_URL_ADMIN}mine.css" type="text/css" rel="stylesheet">
 
         <style type="text/css">
             #parent
@@ -43,6 +21,38 @@ mine.css" type="text/css" rel="stylesheet">
             }
         </style>
 
+        <script type="text/javascript">
+            window.onload=function () {
+                var form = document.getElementsByTagName("form")[0];
+
+                form.onsubmit=function (evt) {
+                    var fd= new FormData(form);
+
+                    var xhr=new XMLHttpRequest();
+                    xhr.open("post","{$smarty.const.__CONTROLLER__}/add");
+                    xhr.onreadystatechange=function () {
+                        if(xhr.readyState==4)
+                        {
+                            console.log(xhr.responseText);
+                        }
+                    }
+
+                    xhr.upload.onprogress=function (event) {
+                        var son=document.getElementById("son");
+
+                        var per=event.loaded/event.total*100+"%";
+                        son.style.width=per;
+                    }
+
+                    xhr.send(fd);
+
+                    //阻止默认提交
+                    evt.preventDefault();
+                }
+
+
+            }
+        </script>
     </head>
 
     <body>
@@ -51,16 +61,14 @@ mine.css" type="text/css" rel="stylesheet">
             <span>
                 <span style="float:left">当前位置是：商品管理-》添加商品信息</span>
                 <span style="float:right;margin-right: 8px;font-weight: bold">
-                    <a style="text-decoration: none" href="<?php echo @__CONTROLLER__;?>
-/showlist">【返回】</a>
+                    <a style="text-decoration: none" href="{$smarty.const.__CONTROLLER__}/showlist">【返回】</a>
                 </span>
             </span>
         </div>
         <div></div>
 
         <div style="font-size: 13px;margin: 10px 5px">
-            <form action="<?php echo @__ACTION__;?>
-" method="post" enctype="multipart/form-data">
+            <form action="{$smarty.const.__ACTION__}" method="post" enctype="multipart/form-data">
             <table border="1" width="100%" class="table_a">
                 <tr>
                     <td>商品名称</td>
@@ -98,4 +106,4 @@ mine.css" type="text/css" rel="stylesheet">
             </form>
         </div>
     </body>
-</html><?php }} ?>
+</html>

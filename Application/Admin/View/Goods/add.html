@@ -21,38 +21,6 @@
             }
         </style>
 
-        <script type="text/javascript">
-            window.onload=function () {
-                var form = document.getElementsByTagName("form")[0];
-
-                form.onsubmit=function (evt) {
-                    var fd= new FormData(form);
-
-                    var xhr=new XMLHttpRequest();
-                    xhr.open("post","{$smarty.const.__CONTROLLER__}/add");
-                    xhr.onreadystatechange=function () {
-                        if(xhr.readyState==4)
-                        {
-                            console.log(xhr.responseText);
-                        }
-                    }
-
-                    xhr.upload.onprogress=function (event) {
-                        var son=document.getElementById("son");
-
-                        var per=event.loaded/event.total*100+"%";
-                        son.style.width=per;
-                    }
-
-                    xhr.send(fd);
-
-                    //阻止默认提交
-                    evt.preventDefault();
-                }
-
-
-            }
-        </script>
     </head>
 
     <body>

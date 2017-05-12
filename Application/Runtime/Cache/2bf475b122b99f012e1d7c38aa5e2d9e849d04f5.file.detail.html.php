@@ -1,25 +1,29 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-05 22:49:43
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 21:41:27
          compiled from "./Application/Home/View/Goods/detail.html" */ ?>
-<?php /*%%SmartyHeaderCode:1033649526590c910708a083-87497944%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:96679960859145dddd24407-51524629%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '2bf475b122b99f012e1d7c38aa5e2d9e849d04f5' => 
     array (
       0 => './Application/Home/View/Goods/detail.html',
-      1 => 1493993814,
+      1 => 1494510083,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1033649526590c910708a083-87497944',
+  'nocache_hash' => '96679960859145dddd24407-51524629',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590c910740d2b',
+  'unifunc' => 'content_59145dde19b0e',
+  'variables' => 
+  array (
+    'info' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590c910740d2b')) {function content_590c910740d2b($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php if ($_valid && !is_callable('content_59145dde19b0e')) {function content_59145dde19b0e($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta name="Generator" content="YONGDA v1.0" />
@@ -28,8 +32,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <meta name="Description" content="" />
         
         <title>诺基亚E66_GSM手机_手机类型_YONGDA商城 - Powered by YongDa</title>
-        
-        <link href="$smarty.const.CSS_URLstyle.css" rel="stylesheet" type="text/css" />
+
+        <link href="<?php echo @CSS_URL;?>
+style.css" rel="stylesheet" type="text/css" />
         
     </head>
     <body style="cursor: auto;">
@@ -150,8 +155,9 @@ biao7.gif"></a>
                     <div class="imgInfo">
                         <a style="position: relative; display: block; outline: 0pt none; text-decoration: none; width: 310px; -moz-user-select: none;" href="<?php echo @IMG_URL;?>
 200905/goods_img/9_P_1241511871575.jpg" id="zoom1" class="MagicZoom MagicThumb" title="诺基亚E66">
-                            <img id="sim806035" src="<?php echo @IMG_URL;?>
-9_G_1241511871574.jpg" alt="诺基亚E66" height="310px" width="310px;" />
+                            <img id="sim806035" src="<?php echo @SITE_URL;?>
+<?php echo $_smarty_tpl->tpl_vars['info']->value['goods_small_img'];?>
+" alt="the picture can't be found" height="310px" width="310px;" />
                             <div class="MagicZoomBigImageCont" style="width: 200px; height: 269px; overflow: hidden; z-index: 100; visibility: visible; position: absolute; top: -10000px; left: 327px; display: block;" id="bc806035">
                                 <div style="position: relative; z-index: 10; left: 0px; top: 0px; padding: 3px;" id="MagicZoomHeaderbc806035" class="MagicZoomHeader">诺基亚E66
                                 </div>
@@ -191,7 +197,8 @@ down.gif" /></a>
                     <div class="textInfo">
                         <form action="javascript:addToCart(9)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
                             <div class="clearfix" style="font-size: 14px; font-weight: bold; padding-bottom: 8px;">
-                                诺基亚E66      
+                                <?php echo $_smarty_tpl->tpl_vars['info']->value['goods_name'];?>
+
                             </div>
                             <ul>
                                 <li class="clearfix">
@@ -202,7 +209,8 @@ down.gif" /></a>
                                 <li class="clearfix">
                                     <dd>
                                         <strong>商品库存：</strong>
-                                        4 台             
+                                        <?php echo $_smarty_tpl->tpl_vars['info']->value['goods_number'];?>
+
                                     </dd>
                                 </li>  
                                 <li class="clearfix">
@@ -212,12 +220,17 @@ down.gif" /></a>
                                 </li>  
                                 <li class="clearfix">
                                     <dd>
-                                        <strong>商品重量：</strong>121克       
+                                        <strong>商品重量：</strong>
+                                        <?php echo $_smarty_tpl->tpl_vars['info']->value['goods_weight'];?>
+
                                     </dd>
                                 </li>
                                 <li class="clearfix">
                                     <dd>
-                                        <strong>上架时间：</strong>2009-05-06      
+                                        <strong>上架时间：</strong>
+                                        <?php echo $_smarty_tpl->tpl_vars['info']->value['goods_create_time'];?>
+
+
                                     </dd>
                                 </li>
                                 <li class="clearfix">
@@ -228,7 +241,8 @@ down.gif" /></a>
                                     <dd>
                                         <strong>市场价格：</strong><font class="market">￥2758元</font><br />
 
-                                        <strong>本店售价：</strong><font class="shop" id="ECS_SHOPPRICE">￥2298元</font><br />
+                                        <strong>本店售价：</strong><font class="shop" id="ECS_SHOPPRICE">￥<?php echo $_smarty_tpl->tpl_vars['info']->value['goods_price'];?>
+</font><br />
                                         <strong>注册用户：</strong><font class="shop" id="ECS_RANKPRICE_1">￥2298元</font><br />
                                         <strong>vip：</strong><font class="shop" id="ECS_RANKPRICE_2">￥2183元</font><br />
                                     </dd>

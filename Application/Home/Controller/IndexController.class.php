@@ -15,15 +15,10 @@ class IndexController extends Controller {
 
         echo $info;
 
+        //get last 10 good
+        $goods=D("goods")->order("goods_id desc")->limit(10)->select();
+        $this->assign("goods",$goods);
         $this->display();
     }
 
-    public function detail($id)
-    {
-        $good=D("goods")->find($id);
-
-        $good["goods_create_time"]=date("Y-m-d",$good["goods_create_time"]);
-        $this->assign("info",$good);
-        $this->display();
-    }
 }

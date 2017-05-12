@@ -108,6 +108,12 @@ class Page{
      */
     function createAtag($url, $pagePerShow, $pagePer)
     {
+        $index=strpos($url,".html");
+        if($index)
+        {
+            $url=substr($url,0,$index);
+        }
+
         if(strpos($url,"page")!==false)
            $url=substr_replace("$url","page/".$pagePer,strpos($url,"page"));//$url = preg_replace("/(page\/\d*)*/","page/".$pagePer,$url);
         elseif ($this->pageCurrent==1)

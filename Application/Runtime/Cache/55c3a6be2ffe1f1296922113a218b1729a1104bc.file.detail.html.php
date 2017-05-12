@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-05 22:18:08
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 21:14:18
          compiled from "./Application/Home/View/Index/detail.html" */ ?>
-<?php /*%%SmartyHeaderCode:1566456169590c89a0de4387-32484095%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:15582668825914613f49c048-47448627%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '55c3a6be2ffe1f1296922113a218b1729a1104bc' => 
     array (
       0 => './Application/Home/View/Index/detail.html',
-      1 => 1493993814,
+      1 => 1494508448,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1566456169590c89a0de4387-32484095',
+  'nocache_hash' => '15582668825914613f49c048-47448627',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5914613f79e9a',
   'variables' => 
   array (
     'info' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590c89a0f41ca',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590c89a0f41ca')) {function content_590c89a0f41ca($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php if ($_valid && !is_callable('content_5914613f79e9a')) {function content_5914613f79e9a($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta name="Generator" content="YONGDA v1.0" />
@@ -155,8 +155,9 @@ biao7.gif"></a>
                     <div class="imgInfo">
                         <a style="position: relative; display: block; outline: 0pt none; text-decoration: none; width: 310px; -moz-user-select: none;" href="<?php echo @IMG_URL;?>
 200905/goods_img/9_P_1241511871575.jpg" id="zoom1" class="MagicZoom MagicThumb" title="诺基亚E66">
-                            <img id="sim806035" src="<?php echo @IMG_URL;?>
-9_G_1241511871574.jpg" alt="诺基亚E66" height="310px" width="310px;" />
+                            <img id="sim806035" src="<?php echo @SITE_URL;?>
+<?php echo $_smarty_tpl->tpl_vars['info']->value['goods_small_img'];?>
+" alt="诺基亚E66" height="310px" width="310px;" />
                             <div class="MagicZoomBigImageCont" style="width: 200px; height: 269px; overflow: hidden; z-index: 100; visibility: visible; position: absolute; top: -10000px; left: 327px; display: block;" id="bc806035">
                                 <div style="position: relative; z-index: 10; left: 0px; top: 0px; padding: 3px;" id="MagicZoomHeaderbc806035" class="MagicZoomHeader">诺基亚E66
                                 </div>

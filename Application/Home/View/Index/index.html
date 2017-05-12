@@ -213,14 +213,16 @@
                     <h2 class="h2bg"><a href="#" >移动手机充值卡</a></h2>
                 </div>
                 <div id="show_hot_area" class="clearfix">
+                    {foreach $goods as $k=>$v}
                     <div class="goodsItem">
 
-                        <a href="#"><img src="{$smarty.const.IMG_URL}9_thumb_G_1241511871555.jpg" alt="诺基亚E66" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="诺基亚E66">诺基亚E66</a></p>
+                        <a href="#"><img src="{$v.goods_small_img}" alt="{$v.goods_id}" class="goodsimg"></a><br />
+                        <p class="f1"><a href="{$smarty.const.__MODULE__}/Goods/detail/id/{$v.goods_id}" title="{$v.goods_name}">{$v.goods_name}</a></p>
                         <font class="market">￥2758元</font><br />
                         <font class="f1">
-                            ￥2298元                     </font>
+                            ￥{$v.goods_price}元                     </font>
                     </div>
+                    {/foreach}
                     <div class="goodsItem">
 
                         <a href="#"><img src="{$smarty.const.IMG_URL}1_thumb_G_1240902890710.jpg" alt="KD876" class="goodsimg"></a><br />
@@ -228,14 +230,6 @@
                         <font class="market">￥1666元</font><br />
                         <font class="f1">
                             ￥1388元                     </font>
-                    </div>
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="{$smarty.const.IMG_URL}8_thumb_G_1241425513488.jpg" alt="飞利浦9@9v" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="飞利浦9@9v">飞利浦9@9v</a></p>
-                        <font class="market">￥479元</font><br />
-                        <font class="f1">
-                            ￥399元                     </font>
                     </div>
 
                 </div>

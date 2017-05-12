@@ -1,25 +1,30 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-05 22:17:09
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 21:40:17
          compiled from "./Application/Home/View/Index/index.html" */ ?>
-<?php /*%%SmartyHeaderCode:2105648585590c89653ec5b9-39318492%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:700660671591457107c2fd9-74324207%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd5c4efec70a0a967b5684ac66a58dba13edd61fd' => 
     array (
       0 => './Application/Home/View/Index/index.html',
-      1 => 1493993814,
+      1 => 1494510011,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2105648585590c89653ec5b9-39318492',
+  'nocache_hash' => '700660671591457107c2fd9-74324207',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590c896554868',
+  'unifunc' => 'content_59145710c76b1',
+  'variables' => 
+  array (
+    'goods' => 0,
+    'v' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590c896554868')) {function content_590c896554868($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php if ($_valid && !is_callable('content_59145710c76b1')) {function content_59145710c76b1($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta name="Generator" content="YONGDA v1.0" />
@@ -254,15 +259,29 @@ top_7.gif" class="iteration">
                     <h2 class="h2bg"><a href="#" >移动手机充值卡</a></h2>
                 </div>
                 <div id="show_hot_area" class="clearfix">
+                    <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['goods']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
                     <div class="goodsItem">
 
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-9_thumb_G_1241511871555.jpg" alt="诺基亚E66" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="诺基亚E66">诺基亚E66</a></p>
+                        <a href="#"><img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['goods_small_img'];?>
+" alt="<?php echo $_smarty_tpl->tpl_vars['v']->value['goods_id'];?>
+" class="goodsimg"></a><br />
+                        <p class="f1"><a href="<?php echo @__MODULE__;?>
+/Goods/detail/id/<?php echo $_smarty_tpl->tpl_vars['v']->value['goods_id'];?>
+" title="<?php echo $_smarty_tpl->tpl_vars['v']->value['goods_name'];?>
+"><?php echo $_smarty_tpl->tpl_vars['v']->value['goods_name'];?>
+</a></p>
                         <font class="market">￥2758元</font><br />
                         <font class="f1">
-                            ￥2298元                     </font>
+                            ￥<?php echo $_smarty_tpl->tpl_vars['v']->value['goods_price'];?>
+元                     </font>
                     </div>
+                    <?php } ?>
                     <div class="goodsItem">
 
                         <a href="#"><img src="<?php echo @IMG_URL;?>
@@ -271,15 +290,6 @@ top_7.gif" class="iteration">
                         <font class="market">￥1666元</font><br />
                         <font class="f1">
                             ￥1388元                     </font>
-                    </div>
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-8_thumb_G_1241425513488.jpg" alt="飞利浦9@9v" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="飞利浦9@9v">飞利浦9@9v</a></p>
-                        <font class="market">￥479元</font><br />
-                        <font class="f1">
-                            ￥399元                     </font>
                     </div>
 
                 </div>
