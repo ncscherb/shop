@@ -1,0 +1,9 @@
+[ 2017-05-15T20:58:42+08:00 ] ::1 /shop/weixin/curl.php?XDEBUG_SESSION_START=17700
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016511s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016682s ]
+ERR: 无法加载控制器:Weixin
+
