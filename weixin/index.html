@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weixin test</title>
+
+    <script type="text/javascript">
+        function sendMenu(type)
+        {
+            var xhr=new XMLHttpRequest();
+            xhr.onreadystatechange=function () {
+                if(xhr.readyState==4)
+                {
+                    alert(xhr.responseText);
+                }
+            };
+
+            xhr.open("get","CMenu.php?type="+type);
+            xhr.send(null);
+
+        }
+    </script>
+</head>
+<body>
+<form action="CMenu.php" method="post">
+    <input type="button" onclick="sendMenu('create')"  value="create menu"/>
+    <input type="button" onclick="sendMenu('query')"  value="query menu"/>
+    <input type="button" onclick="sendMenu('delete')"  value="delete menu"/>
+</form>
+</body>
+</html>
