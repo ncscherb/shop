@@ -4,12 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2996bc3-f2da-4c83-a585-3b257d4698f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/17_05_24.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weixin/WeChat.php" afterPath="$PROJECT_DIR$/weixin/WeChat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weixin/accesstoken" afterPath="$PROJECT_DIR$/weixin/accesstoken" />
-    </list>
+    <list default="true" id="f2996bc3-f2da-4c83-a585-3b257d4698f7" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -384,7 +379,7 @@
       <workItem from="1494936181211" duration="3642000" />
       <workItem from="1495447675967" duration="8969000" />
       <workItem from="1495627042749" duration="8432000" />
-      <workItem from="1495713075236" duration="3473000" />
+      <workItem from="1495713075236" duration="3520000" />
     </task>
     <task id="LOCAL-00001" summary="add memcached.php">
       <created>1492701614340</created>
@@ -425,7 +420,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121901000" />
+    <option name="totallyTimeSpent" value="121948000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,11 +432,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="28" width="1668" height="832" extended-state="7" />
-    <editor active="true" />
+    <frame x="-1" y="28" width="1668" height="832" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18997525" sideWeight="0.4943662" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18997525" sideWeight="0.4943662" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3262195" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
