@@ -5,6 +5,9 @@
  * Date: 17-5-12
  * Time: 下午10:24
  */
+define("APPID","wxd909d273b63fc535");
+define("APPSECRET","97fa95bd7aea4026d6cdec2ad2d7e784");
+define("TOKEN","dsl");
 
 class WeChat
 {
@@ -12,7 +15,7 @@ class WeChat
     private $_appsecret;
     private $_token;
 
-    public function __construct($appid,$appsecret,$token)
+    public function __construct($appid=APPID,$appsecret=APPSECRET,$token=TOKEN)
     {
        $this->_appid=$appid;
        $this->_appsecret=$appsecret;
