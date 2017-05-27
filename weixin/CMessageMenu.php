@@ -6,7 +6,7 @@
  * Date: 17-5-25
  * Time: 下午10:13
  */
-use weixin;
+namespace weixin;
 
 class CMenuMessage implements IMessage
 {

@@ -6,7 +6,8 @@
  * Date: 17-5-25
  * Time: 下午9:48
  */
-use weixin;
+
+include_once("./MessageClass.php");
 
 interface IMessage
 {
@@ -16,7 +17,7 @@ interface IMessage
 class CMessageManager
 {
 
-    public function responseMsg()
+    public static function responseMsg()
     {
         //get post data, May be due to the different environments
         //$postStr = $GLOBALS["HTTP_RAW_POST_DATA"];
@@ -26,17 +27,28 @@ class CMessageManager
         if (!empty($postStr)){
 
             $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+            // header('Location: '."./test.php?post=".json_encode($postObj));
 
             switch ($postObj->MsgType)
             {
                 case "text":
                    $message=new TextMessage();
                     break;
+                case "image":
+                    $message=new ImageMessage();
+                    break;
+                case "location":
+                    $message=new LocationMessage();
+                    break;
                 case "event":
-                    $message=$this->doEvent($postObj);
+                    $message=CMessageManager::doEvent($postObj);
                     break;
             }
 
+            if(!isset($message))
+            {
+                echo "message is not defined!";
+            }
             $message->responseMsg($postObj);
 
         }else {
@@ -44,16 +56,28 @@ class CMessageManager
             exit;
         }
 
-
     }
 
-    public function doEvent($postObj)
+    public static function doEvent($postObj)
     {
-        switch($postObj->EVENT)
+        switch($postObj->Event)
         {
             case "CLICK":
-                return new CMenuMessage();
+                return new MenuMessage();
+                break;
+            case "subscribe":
+            case "unsubscribe":
+                return new SubscribeMessage();
+                break;
+            case "scancode_waitmsg":
+                return new ScanMessage();
+                break;
+            default:
+
+                break;
+
         }
 
     }
 }
+

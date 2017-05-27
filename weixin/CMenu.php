@@ -6,14 +6,14 @@
  * Date: 17-5-24
  * Time: 下午9:42
  */
-include "./WeChat.php";
+include_once("./WeChat.php");
 
 class CMenu
 {
     private $weChat;
     private $token;
 
-    public function __Construct()
+    public function __construct()
     {
         $this->weChat=new WeChat();
         $this->token=$this->weChat->getAccesstoken();
@@ -21,7 +21,7 @@ class CMenu
 
     public function createMenu()
     {
-        $menuJson=file_get_contents("./menuSet.json");
+        $menuJson=file_get_contents("./menu.json");
         $url="https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$this->token;
 
         $msg=$this->weChat->curlRequest($url,true,"post",$menuJson);
