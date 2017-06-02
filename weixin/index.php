@@ -4,7 +4,7 @@
   * update time: 20141008
   */
 
-include_once("./CMessageManager.php");
+include_once("./CMessageResponse.php");
 
 //define your token
 define("APPID","wxd909d273b63fc535");
@@ -13,6 +13,6 @@ define("TOKEN","dsl");
 
 //$wechat=new WeChat(APPID,APPSECRET,TOKEN);
 
-CMessageManager::responseMsg();
+CMessageResponse::responseMsg();
 
 

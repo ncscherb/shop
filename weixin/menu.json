@@ -1,0 +1,41 @@
+{
+  "button": [
+    {
+      "type": "click",
+      "name": "news",
+      "key": "news"
+    },
+    {
+      "name": "菜单",
+      "sub_button": [
+        {
+          "type": "view",
+          "name": "搜索",
+          "url": "http://www.soso.com/"
+        },
+        {
+          "type": "click",
+          "name": "赞一下我们",
+          "key": "V1001_GOOD"
+        }
+      ]
+    },
+    {
+      "name": "扫码",
+      "sub_button": [
+        {
+          "type": "scancode_waitmsg",
+          "name": "扫码带提示",
+          "key": "scanCodeWait",
+          "sub_button": [ ]
+        },
+        {
+          "type": "scancode_push",
+          "name": "扫码推事件",
+          "key": "scanCodePush",
+          "sub_button": [ ]
+        }
+      ]
+    }
+  ]
+}

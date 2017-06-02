@@ -9,6 +9,54 @@
 
 include_once("./CMessage.php");
 
+class CMessageFactory
+{
+    public function messageCreate($postObj)
+    {
+        switch ($postObj->MsgType)
+        {
+            case MessageEumn::TEXT:
+                $message=new TextMessage();
+                break;
+            case MessageEumn::IMAGE:
+                $message=new ImageMessage();
+                break;
+            case MessageEumn::LOCATION:
+                $message=new LocationMessage();
+                break;
+            case MessageEumn::EVENT:
+                $message=$this->doEvent($postObj->Event);
+                break;
+        }
+
+        return $message;
+
+    }
+
+    public function doEvent($event)
+    {
+        switch($event)
+        {
+            case MessageEumn::CLICK:
+                $message= new MenuMessage();
+                break;
+            case MessageEumn::SUBSCRIBE:
+            case MessageEumn::UNSUBSCRIBE:
+                $message=new SubscribeMessage();
+                break;
+            case MessageEumn::SCANCODE_WAITMSG:
+                $message= new ScanMessage();
+                break;
+            default:
+
+                break;
+
+        }
+
+        return $message;
+    }
+}
+
 class TextMessage implements IMessage
 {
     public function responseMsg($postObj)
@@ -24,7 +72,8 @@ class TextMessage implements IMessage
             $arr=array( "createTime"=>time(),
                 "content"=>$contentStr);
 
-            $resultStr=CMessage::message(MessageEumn::TEXT,$postObj,$arr);
+           // $resultStr=CMessage::message(MessageEumn::TEXT,$postObj,$arr);
+            $resultStr=CMessage::message(MessageEumn::MUSIC,$postObj,$arr);
             echo $resultStr;
         }else{
             echo "Input something...";
@@ -88,8 +137,10 @@ class ImageMessage implements IMessage
         // TODO: Implement responseMsg() method.
         $content="Your image url is :".$postObj->PicUrl;
 
-        echo CMessage::message(MessageEumn::IMAGE_URL,$postObj,$content);
-        //echo CMessage::message(MessageEumn:IMAGE_ID,$postObj,$postObj->MediaId);
+        //echo CMessage::message(MessageEumn::IMAGE_URL,$postObj,$content);
+       // echo CMessage::message(MessageEumn::IMAGE_ID,$postObj,$postObj->MediaId);
+        $arr=array("content"=>$postObj->MediaId);
+        echo CMessage::message(MessageEumn::TEXT,$postObj,$arr);
 
     }
 }

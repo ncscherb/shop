@@ -1,0 +1,57 @@
+[ 2017-05-27T19:44:05+08:00 ] ::1 /shop/weixin/curl.php?XDEBUG_SESSION_START=17700
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.023192s ]
+INFO: [ app_init ] --END-- [ RunTime:0.044302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.030703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.030845s ]
+ERR: 无法加载控制器:Weixin
+
+[ 2017-05-27T19:46:20+08:00 ] ::1 /shop/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.010737s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005888s ]
+SQL: SHOW COLUMNS FROM `sw_goods` [ RunTime:0.7345s ]
+SQL: SELECT * FROM `sw_goods` ORDER BY goods_id desc LIMIT 10   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.392158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.392278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014964s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015060s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000683s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000825s ]
+
+[ 2017-05-27T19:46:21+08:00 ] ::1 /shop/2014-11-09/small_545f1b848cb03.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000347s ]
+
+[ 2017-05-27T19:46:21+08:00 ] ::1 /shop/2014-11-09/small_545f1beb27005.JPG
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+
+[ 2017-05-27T19:46:21+08:00 ] ::1 /shop/Application/Home/Public/img/ecmoban_link.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+
+[ 2017-05-27T19:46:21+08:00 ] ::1 /shop/Application/Home/Public/img/yongda_logo.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+
+[ 2017-05-27T19:46:29+08:00 ] ::1 /shop/weixin/curl.php?XDEBUG_SESSION_START=17700
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+ERR: 无法加载控制器:Weixin
+
