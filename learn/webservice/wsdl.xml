@@ -1,0 +1,59 @@
+<?xml version ='1.0' encoding ='UTF-8' ?>
+<definitions
+        targetNamespace='http://localhost/00/'
+        xmlns:tns='http://localhost/00/'
+        xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/'
+        xmlns:xsd='http://www.w3.org/2001/XMLSchema'
+        xmlns:soapenc='http://schemas.xmlsoap.org/soap/encoding/'
+        xmlns:wsdl='http://schemas.xmlsoap.org/wsdl/'
+        xmlns='http://schemas.xmlsoap.org/wsdl/'>
+    <!--<types> 元素定义 web service 使用的数据类型,WSDL 使用 XML Schema 语法来定义数据类型,也可以自定义Schema不包含的类型-->
+    <types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                    targetNamespace="http://localhost/00/">
+        </xsd:schema>
+    </types>
+    <!--
+    <message> 元素可定义每个消息的部件,以及相关联的数据类型.
+    -->
+    <message name='testRequest'>
+        <part name="term" type="xsd:string"/>
+    </message>
+    <message name='testResponse'>
+        <part name="value" type="xsd:string"/>
+    </message>
+    <!--
+    <portType> 元素是最重要的 WSDL 元素.它可描述一个 web service、可被执行的操作,以及相关的消息.
+    它告诉你去哪个WebService的连接点,扮演了一个控制者.
+    -->
+    <portType name='oplist'>
+        <operation name='test'>
+            <input message='tns:testRequest'/>
+            <output message='tns:testResponse'/>
+        </operation>
+    </portType>
+    <!--<binding> 元素为每个端口定义消息格式和协议细节-->
+    <binding name='cartSoap' type='tns:oplist'>
+        <!--style:属性可取值 "rpc" 或 "document",ransport:属性定义了要使用的 SOAP 协议.在这个例子中我们使用 HTTP-->
+        <soap:binding style='rpc'
+                      transport='http://schemas.xmlsoap.org/soap/http'/>
+        <!--operation 元素定义了每个端口提供的操作符,对于每个操作,相应的 SOAP 行为都需要被定义-->
+        <operation name='test'>
+            <soap:operation soapAction='http://www.cwtservice.cn/newOperation/'/>
+            <input>
+                <soap:body use='encoded' namespace='urn:xmethods-delayed-quotes'
+                           encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+            </input>
+            <output>
+                <soap:body use='encoded' namespace='urn:xmethods-delayed-quotes'
+                           encodingStyle='http://schemas.xmlsoap.org/soap/encoding/'/>
+            </output>
+        </operation>
+    </binding>
+    <!--<service>包含一个或者多个port元素,每个port元素表示一个不同的Web服务-->
+    <service name='shopWS'>
+        <port name='cartSoap' binding='tns:cartSoap'>
+            <soap:address location='http://localhost/shop/webservice/WebServiceServer.php'/>
+        </port>
+    </service>
+</definitions>

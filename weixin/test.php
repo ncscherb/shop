@@ -1,6 +1,6 @@
 <?php
 
-include_once ("CMessageSend.php");
+include_once("./CMediaManager.php");
 
-$ms=new CMessageSend();
-$ms->sendAll();
+$mm=new CMediaManager();
+$mm->addTmpMedia();

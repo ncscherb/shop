@@ -15,14 +15,14 @@
                 }
             };
 
-            xhr.open("get","CMenu.php?type="+type);
+            xhr.open("get","menu/CMenu.php?type="+type);
             xhr.send(null);
 
         }
     </script>
 </head>
 <body>
-<form action="CMenu.php" method="post">
+<form action="menu/CMenu.php" method="post">
     <input type="button" onclick="sendMenu('create')"  value="create menu"/>
     <input type="button" onclick="sendMenu('query')"  value="query menu"/>
     <input type="button" onclick="sendMenu('delete')"  value="delete menu"/>
